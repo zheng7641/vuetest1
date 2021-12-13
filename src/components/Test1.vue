@@ -1,15 +1,16 @@
 <template>
   <div>
-    aaa{{ deliverParentAge }}
+    {{ a }}{{ this.$route.query.title }}
   </div>
 </template>
 
 <script>
 export default {
   name: 'Test1',
-
-  props: {
-    deliverParentAge: Number
+  data () {
+    return {
+      a: 'a'
+    }
   }
 }
 </script>

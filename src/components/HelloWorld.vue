@@ -18,10 +18,11 @@
     <div v-on:click="jia()">{{ jiayi }}</div>
     <div v-on:click="cli()">click</div>
     <input v-model="shuangxiang" placeholder="编辑我……">
-    <Test1 v-bind:deliverParentAge="chuanzhi1"></Test1>
+    <Test1 v-bind:title=1></Test1>
     <div v-on:click="bindval()">cz</div>
     <h3>
-      <router-link :to="{name:'Test1'}">aa</router-link>
+      <router-link :to="{path: '/Test1', query: {title: 1}}">aa</router-link>
+
     </h3>
   </div>
 </template>
@@ -42,8 +43,7 @@ export default {
       vmodelres: null,
       jiayi: 1,
       shuangxiang: 'sx',
-      chuanzhi1: 1,
-      deliverParentAge: 1
+      chuanzhi1: 1
     }
   },
   methods: {
@@ -76,7 +76,7 @@ export default {
     }
   },
   components: {
-    Test1
+    'Test1': Test1
   }
 }
 </script>
