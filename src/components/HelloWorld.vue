@@ -27,10 +27,12 @@
     </h3>
 
     <Test1></Test1>
+    <div v-on:click="postajax()">getjson</div>
   </div>
 </template>
 
 <script>
+
 import Test1 from './Test1'
 
 export default {
@@ -66,6 +68,12 @@ export default {
     },
     cli () {
       alert('click')
+    },
+    postajax () {
+      this.$axios({
+        method: 'get',
+        url: 'https://www.runoob.com/try/ajax/json_demo.json'
+      }).then(response => console.log(response))
     }
   },
   computed: {
