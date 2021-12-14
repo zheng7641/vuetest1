@@ -19,11 +19,14 @@
     <div v-on:click="cli()">click</div>
     <input v-model="shuangxiang" placeholder="编辑我……">
     <Test1 v-bind:title=1></Test1>
+
     <div v-on:click="bindval()">cz</div>
     <h3>
       <router-link :to="{path: '/Test1', query: {title: 1}}">aa</router-link>
 
     </h3>
+
+    <Test1></Test1>
   </div>
 </template>
 
